@@ -1,0 +1,74 @@
+[
+    {
+        "id": "safety_manual_v2_p1_c1",
+        "manual_name": "Safety_Manual_v2.pdf",
+        "page": 1,
+        "chunk_id": "safety_manual_v2_p1_c1",
+        "content": "This safety manual provides comprehensive guidelines for workplace safety procedures. All employees must read and understand these guidelines before beginning work. The manual covers fire safety, emergency evacuation procedures, personal protective equipment requirements, and hazard identification protocols.",
+        "image_caption": null,
+        "section_title": "Introduction"
+    },
+    {
+        "id": "safety_manual_v2_p5_c1",
+        "manual_name": "Safety_Manual_v2.pdf",
+        "page": 5,
+        "chunk_id": "safety_manual_v2_p5_c1",
+        "content": "Personal Protective Equipment (PPE) must be worn at all times in designated areas. Required PPE includes: safety glasses in all production areas, steel-toed boots in warehouse zones, hard hats in construction areas, and hearing protection where noise levels exceed 85 decibels. Failure to wear appropriate PPE may result in disciplinary action.",
+        "image_caption": null,
+        "section_title": "Personal Protective Equipment"
+    },
+    {
+        "id": "safety_manual_v2_p12_c1",
+        "manual_name": "Safety_Manual_v2.pdf",
+        "page": 12,
+        "chunk_id": "safety_manual_v2_p12_c1",
+        "content": "In case of fire, immediately activate the nearest fire alarm pull station and evacuate using the designated emergency exits. Do not use elevators during a fire emergency. Proceed to the assembly point in the north parking lot and await further instructions from the fire warden. Do not re-enter the building until the all-clear signal is given.",
+        "image_caption": "Floor plan diagram showing emergency exit routes marked in green with assembly point location in the north parking lot",
+        "section_title": "Fire Emergency Procedures"
+    },
+    {
+        "id": "safety_manual_v2_p15_c1",
+        "manual_name": "Safety_Manual_v2.pdf",
+        "page": 15,
+        "chunk_id": "safety_manual_v2_p15_c1",
+        "content": "Chemical spill response requires immediate action. First, alert nearby personnel and evacuate the immediate area. Do not attempt to clean up unknown chemicals. Contact the safety coordinator at extension 5555 immediately. If the spill involves hazardous materials, activate the emergency ventilation system and wait for the hazmat response team.",
+        "image_caption": null,
+        "section_title": "Chemical Spill Response"
+    },
+    {
+        "id": "operations_guide_p3_c1",
+        "manual_name": "Operations_Guide.pdf",
+        "page": 3,
+        "chunk_id": "operations_guide_p3_c1",
+        "content": "The main control panel is located in the operations center on the second floor. All system parameters can be monitored and adjusted from this central location. The panel displays real-time data including temperature, pressure, flow rates, and equipment status. Operators must log all parameter changes in the shift log.",
+        "image_caption": "Control panel layout showing main display screen, parameter adjustment knobs, and emergency stop button locations",
+        "section_title": "Control Panel Overview"
+    },
+    {
+        "id": "operations_guide_p8_c1",
+        "manual_name": "Operations_Guide.pdf",
+        "page": 8,
+        "chunk_id": "operations_guide_p8_c1",
+        "content": "Daily startup procedures must be followed in the correct sequence. Begin by verifying all safety interlocks are engaged. Next, initialize the cooling system and wait for temperature stabilization (approximately 10 minutes). Then activate the main power supply and verify all indicator lights show green status before proceeding with production.",
+        "image_caption": null,
+        "section_title": "Daily Startup Procedures"
+    },
+    {
+        "id": "maintenance_handbook_p22_c1",
+        "manual_name": "Maintenance_Handbook.pdf",
+        "page": 22,
+        "chunk_id": "maintenance_handbook_p22_c1",
+        "content": "Quarterly maintenance of the hydraulic system includes: checking fluid levels and topping up as needed, inspecting all hoses for wear or damage, testing pressure relief valves, and replacing filters. Document all maintenance activities in the equipment log. Any abnormalities must be reported to the maintenance supervisor immediately.",
+        "image_caption": "Hydraulic system schematic showing fluid reservoir, pump, pressure gauges, and filter locations",
+        "section_title": "Hydraulic System Maintenance"
+    },
+    {
+        "id": "maintenance_handbook_p30_c1",
+        "manual_name": "Maintenance_Handbook.pdf",
+        "page": 30,
+        "chunk_id": "maintenance_handbook_p30_c1",
+        "content": "Electrical system troubleshooting should only be performed by qualified electricians. Before any electrical work, ensure the main breaker is locked out and tagged. Use a voltage tester to verify zero energy state. Common issues include loose connections, worn contactors, and faulty sensors. Always follow the lockout/tagout procedures outlined in Section 4.",
+        "image_caption": null,
+        "section_title": "Electrical Troubleshooting"
+    }
+]

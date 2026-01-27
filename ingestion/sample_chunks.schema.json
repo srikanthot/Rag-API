@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Sample Chunks Input Format",
+    "description": "Schema for chunk data to be indexed into Azure AI Search",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": ["id", "manual_name", "page", "chunk_id", "content"],
+        "properties": {
+            "id": {
+                "type": "string",
+                "description": "Unique document identifier (format: {manual_slug}_{page}_{chunk_num})",
+                "examples": ["safety_manual_v2_p42_c3"]
+            },
+            "manual_name": {
+                "type": "string",
+                "description": "Source PDF filename",
+                "examples": ["Safety_Manual_v2.pdf"]
+            },
+            "page": {
+                "type": "integer",
+                "description": "Page number (1-indexed)",
+                "minimum": 1,
+                "examples": [42]
+            },
+            "chunk_id": {
+                "type": "string",
+                "description": "Unique chunk identifier (same as id)",
+                "examples": ["safety_manual_v2_p42_c3"]
+            },
+            "content": {
+                "type": "string",
+                "description": "Main text content of the chunk (800-1200 tokens recommended)",
+                "minLength": 1
+            },
+            "image_caption": {
+                "type": ["string", "null"],
+                "description": "Generated caption for images/diagrams (optional)",
+                "examples": ["Diagram showing emergency exit routes on floor 3"]
+            },
+            "section_title": {
+                "type": ["string", "null"],
+                "description": "Section heading for context (optional)",
+                "examples": ["Emergency Procedures"]
+            }
+        },
+        "additionalProperties": false
+    },
+    "examples": [
+        [
+            {
+                "id": "safety_manual_v2_p1_c1",
+                "manual_name": "Safety_Manual_v2.pdf",
+                "page": 1,
+                "chunk_id": "safety_manual_v2_p1_c1",
+                "content": "This safety manual provides comprehensive guidelines for workplace safety...",
+                "image_caption": null,
+                "section_title": "Introduction"
+            },
+            {
+                "id": "safety_manual_v2_p42_c1",
+                "manual_name": "Safety_Manual_v2.pdf",
+                "page": 42,
+                "chunk_id": "safety_manual_v2_p42_c1",
+                "content": "In case of fire, immediately evacuate using the nearest exit...",
+                "image_caption": "Floor plan showing emergency exit locations",
+                "section_title": "Emergency Procedures"
+            }
+        ]
+    ]
+}

@@ -1,0 +1,150 @@
+{
+    "name": "manuals-index",
+    "fields": [
+        {
+            "name": "id",
+            "type": "Edm.String",
+            "key": true,
+            "searchable": false,
+            "filterable": false,
+            "sortable": false,
+            "facetable": false,
+            "retrievable": true
+        },
+        {
+            "name": "manual_name",
+            "type": "Edm.String",
+            "key": false,
+            "searchable": true,
+            "filterable": true,
+            "sortable": true,
+            "facetable": true,
+            "retrievable": true,
+            "analyzer": "en.microsoft"
+        },
+        {
+            "name": "page",
+            "type": "Edm.Int32",
+            "key": false,
+            "searchable": false,
+            "filterable": true,
+            "sortable": true,
+            "facetable": true,
+            "retrievable": true
+        },
+        {
+            "name": "chunk_id",
+            "type": "Edm.String",
+            "key": false,
+            "searchable": false,
+            "filterable": true,
+            "sortable": false,
+            "facetable": false,
+            "retrievable": true
+        },
+        {
+            "name": "content",
+            "type": "Edm.String",
+            "key": false,
+            "searchable": true,
+            "filterable": false,
+            "sortable": false,
+            "facetable": false,
+            "retrievable": true,
+            "analyzer": "en.microsoft"
+        },
+        {
+            "name": "content_vector",
+            "type": "Collection(Edm.Single)",
+            "key": false,
+            "searchable": true,
+            "filterable": false,
+            "sortable": false,
+            "facetable": false,
+            "retrievable": false,
+            "dimensions": 1536,
+            "vectorSearchProfile": "vector-profile"
+        },
+        {
+            "name": "image_caption",
+            "type": "Edm.String",
+            "key": false,
+            "searchable": true,
+            "filterable": false,
+            "sortable": false,
+            "facetable": false,
+            "retrievable": true,
+            "analyzer": "en.microsoft"
+        },
+        {
+            "name": "section_title",
+            "type": "Edm.String",
+            "key": false,
+            "searchable": true,
+            "filterable": true,
+            "sortable": false,
+            "facetable": true,
+            "retrievable": true,
+            "analyzer": "en.microsoft"
+        },
+        {
+            "name": "last_updated",
+            "type": "Edm.DateTimeOffset",
+            "key": false,
+            "searchable": false,
+            "filterable": true,
+            "sortable": true,
+            "facetable": false,
+            "retrievable": true
+        }
+    ],
+    "vectorSearch": {
+        "algorithms": [
+            {
+                "name": "hnsw-algorithm",
+                "kind": "hnsw",
+                "hnswParameters": {
+                    "m": 4,
+                    "efConstruction": 400,
+                    "efSearch": 500,
+                    "metric": "cosine"
+                }
+            }
+        ],
+        "profiles": [
+            {
+                "name": "vector-profile",
+                "algorithmConfigurationName": "hnsw-algorithm"
+            }
+        ]
+    },
+    "semantic": {
+        "configurations": [
+            {
+                "name": "semantic-config",
+                "prioritizedFields": {
+                    "titleField": {
+                        "fieldName": "section_title"
+                    },
+                    "contentFields": [
+                        {
+                            "fieldName": "content"
+                        },
+                        {
+                            "fieldName": "image_caption"
+                        }
+                    ],
+                    "keywordsFields": [
+                        {
+                            "fieldName": "manual_name"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "corsOptions": {
+        "allowedOrigins": ["*"],
+        "maxAgeInSeconds": 300
+    }
+}
